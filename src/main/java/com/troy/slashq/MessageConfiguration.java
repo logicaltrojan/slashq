@@ -19,11 +19,6 @@ public class MessageConfiguration {
             int finalI = i;
             messageRepository.registerConsumerToTopic("" + finalI, new SingleThreadQueueExecutor(c -> {
                 log.info("Topic-" + finalI + " is handled : " + c.getMessage() + " Thread : " + Thread.currentThread().getName());
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
             }));
 
         }

@@ -10,7 +10,6 @@ public class SlashqApplication {
 
         SpringApplication.run(SlashqApplication.class, args);
 
-        for(;;){}
 
     }
 
